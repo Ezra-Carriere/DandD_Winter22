@@ -10,12 +10,8 @@ let theButtons = document.querySelectorAll("#buttonHolder img"), theHeading = do
 //step 3
 // functionality always goes in the middle -> how do we want the app to behave
 function changeBGImage() {
-	debugger;
-	// start with the object, then change a property or run a method
-	theHeading.textContent = "Super Awesome Drag and Drop Game";
-	let theNewSource = "images/backGround" + this.id + ".jpg";
-
-	console.log(theNewSource);
+	// the `` is a Javascript template string. It tells the JS engine to evaluate the expression inside the braces - run that little bit of code.In this case it's just pulling the button we clicked on and putting it at the end of the image name (0,1,2,3) 
+	puzzleBoard.style.backgroundImage = `url(images/backGround${this.id}.jpg)`;
 }
 // step 2
 //event handling always goes on the bottom =>
