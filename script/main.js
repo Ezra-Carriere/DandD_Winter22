@@ -48,8 +48,7 @@ function handleDrop(e) {
 	  console.log('There is already a puzzle piece here');
 	  return;
 	}
-  
-	// move the dragged piece to the drop zone
+
 	this.appendChild(draggedPiece);
   }
 // step 2
