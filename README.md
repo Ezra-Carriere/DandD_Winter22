@@ -1,6 +1,6 @@
 # Drag and Drop Reference
 
-TODO: Write a project description
+Use the puzzle pieces to fill in the blurred image.
 
 ## Contributing
 
