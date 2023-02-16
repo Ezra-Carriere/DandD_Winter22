@@ -36,9 +36,22 @@ function handleDragOver(e) {
 function handleDrop(e) {
 	e.preventDefault();
 	console.log('dropped something on me');
-	// this line is going to move the dragged piece from the left side of the board into whatever drop zone we choose. appendChild means "add element to the container"
+
 	this.appendChild(draggedPiece);
 }
+
+function handleDrop(e) {
+	e.preventDefault();
+	console.log('dropped something on me');
+  
+	if (this.children.length > 0) {
+	  console.log('There is already a puzzle piece here');
+	  return;
+	}
+  
+	// move the dragged piece to the drop zone
+	this.appendChild(draggedPiece);
+  }
 // step 2
 //event handling always goes on the bottom =>
 //how do we want users to interact with our app
