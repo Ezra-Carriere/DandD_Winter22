@@ -36,13 +36,6 @@ function handleDragOver(e) {
 function handleDrop(e) {
 	e.preventDefault();
 	console.log('dropped something on me');
-
-	this.appendChild(draggedPiece);
-}
-
-function handleDrop(e) {
-	e.preventDefault();
-	console.log('dropped something on me');
   
 	if (this.children.length > 0) {
 	  console.log('There is already a puzzle piece here');
@@ -51,6 +44,7 @@ function handleDrop(e) {
 
 	this.appendChild(draggedPiece);
   }
+
 // step 2
 //event handling always goes on the bottom =>
 //how do we want users to interact with our app
