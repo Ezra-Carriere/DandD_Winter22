@@ -15,10 +15,19 @@ draggedPiece;
 //step 3
 // functionality always goes in the middle -> how do we want the app to behave
 function changeBGImage() {
-	// the `` is a Javascript template string. It tells the JS engine to evaluate the expression inside the braces - run that little bit of code.In this case it's just pulling the button we clicked on and putting it at the end of the image name (0,1,2,3) 
 
-	// bug fix #2 goes here
 	puzzleBoard.style.backgroundImage = `url(images/backGround${this.id}.jpg)`;
+
+	dropZones.forEach(zone => {
+		while (zone.firstChild) {
+			zone.removeChild(zone.firstChild);
+		}
+	});
+
+	puzzlePieces.forEach(piece => {
+		const puzzleIndex = piece.dataset.puzzleIndex;
+		piece.src = `images/puzzle${bgId}/${puzzleIndex}.jpg`;
+	});
 }
 
 function handleStartDrag() {
